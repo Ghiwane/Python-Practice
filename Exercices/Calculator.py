@@ -1,4 +1,4 @@
-class calculator:
+class Calculator:
     def __init__(self):
         self.n=0
         self.history_list=[]
@@ -11,10 +11,10 @@ class calculator:
     
     def division(self, a, b):
         try:
-            self.n+=1
             res = float(a/b)
             self.history_list.append(f"{a} / {b} = {res}")
             print(res)
+            self.n+=1
         except ZeroDivisionError:
             print("We can't, buddy.")
 
@@ -37,7 +37,7 @@ class calculator:
         for operation in self.history_list:
             print(operation)
 
-calc = calculator()
+calc = Calculator()
 calc.addition(10, 5)
 calc.division(10, 0)
 calc.multiplication(3, 4)
