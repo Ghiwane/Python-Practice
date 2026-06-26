@@ -219,3 +219,5 @@ __marimo__/
 
 # Configuration locale de VS Code
 .vscode/
+
+*.exe
