@@ -1,16 +1,16 @@
 class Student:
-    def __init__(self, name, honors, grades):
+    def __init__(self, name, grades, honors="?"):
         self.name = name
-        self.honors = honors
         self.grades = grades
+        self.honors = honors
 
     def __str__(self):
-        return f"Student Name: {self.name}, Honors: {self.honors}, Grades: {self.grades}"
+        return f"Student name: {self.name}, Honors: {self.honors}, Grades: {self.grades}, Average: {self.calculate_average():.2f}"
     
     def calculate_average(self):
         if self.grades:
             return float(sum(self.grades)/len(self.grades))
-        return
+        return 0.0
     
     def assign_honors(self):
         average = self.calculate_average()
