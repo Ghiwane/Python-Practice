@@ -1,21 +1,36 @@
-# League Manager
+# Python Practice
 
-Python Synthesis Exercise: Sports league management using Object-Oriented Programming (OOP).
-
----
-
-##  Features
-
-**Player Management**: Create players with dynamically calculated metrics (average score, automatic status assignment).
-**League Control**: Prevent duplicate player registrations, search for players by name, and list current tournament finalists.
-**Advanced Sorting**: Generate dynamic leaderboards ranked by player score averages.
-
+A personal repository dedicated to learning, practicing, and mastering Python. This workspace centralizes my coding exercises, OOP projects, and syntax transition workflows from other languages.
 
 ---
 
-##  Project Structure
+## 📁 Repository Content
+
+### 1. League Manager (`/League-manager`)
+A comprehensive synthesis exercise focused on Object-Oriented Programming (OOP) applied to sports league management.
+* **Player Management**: Instantiation, dynamic metrics calculation, and automatic status assignment.
+* **League Control**: Duplicate prevention, search algorithms, and finalist filtering.
+* **Advanced Sorting**: Generating dynamic leaderboards ranked by player score averages.
+
+### 2. From C to Python (`/From-C-to-Python`)
+A practice module dedicated to converting algorithms and programs from C to Python.
+* Designed to adapt procedural concepts (arrays, loops, manual memory/structs) into modern, clean Python syntax (lists, built-in methods, OOP).
+
+---
+
+## 🛠️ Project Structure
 
 ```text
-├── Player.py        # Player class (scores, status)
-├── League.py        # League class (registration, ranking)
-└── main.py          # Script execution and simulation tests
+Python Practice/
+├── .gitignore               # Global exclusion rules (cache, compiled .exe files)
+├── README.md                # Global repository documentation
+│
+├── League-manager/          # Project: OOP League Management
+│   ├── main.py
+│   ├── Player.py
+│   └── League.py
+│
+└── From-C-to-Python/        # Exercises: C to Python Conversion
+    ├── CFile.c              # Original C source code
+    ├── CFile.exe            # Locally compiled executable
+    └── script.py            # Translated Python script
