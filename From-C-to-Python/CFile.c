@@ -1,76 +1,76 @@
 #include <stdio.h>
 #include <string.h>
 
-#define MAX_ETUDIANTS 50
-#define MAX_NOM 50
+#define MAX_STUDENTS 50
+#define MAX_NAME 50
 
 typedef struct {
-    char nom[MAX_NOM];
-    float notes[3];
-    char mention[20];
-} Etudiant;
+    char name[MAX_NAME];
+    float grades[3];
+    char honors[20];
+} Student;
 
-float calculer_moyenne(float notes[], int nb) {
-    float somme = 0;
-    for (int i = 0; i < nb; i++) somme += notes[i];
-    return somme / nb;
+float calculate_average(float grades[], int count) {
+    float sum = 0;
+    for (int i = 0; i < count; i++) sum += grades[i];
+    return sum / count;
 }
 
-void attribuer_mention(Etudiant *e) {
-    float moy = calculer_moyenne(e->notes, 3);
-    if (moy >= 16.0)       strcpy(e->mention, "Très bien");
-    else if (moy >= 14.0)  strcpy(e->mention, "Bien");
-    else if (moy >= 12.0)  strcpy(e->mention, "Assez bien");
-    else if (moy >= 10.0)  strcpy(e->mention, "Passable");
-    else                   strcpy(e->mention, "Ajourné");
+void assign_honors(Student *s) {
+    float avg = calculate_average(s->grades, 3);
+    if (avg >= 16.0)       strcpy(s->honors, "Excellent");
+    else if (avg >= 14.0)  strcpy(s->honors, "Very Good");
+    else if (avg >= 12.0)  strcpy(s->honors, "Good");
+    else if (avg >= 10.0)  strcpy(s->honors, "Pass");
+    else                   strcpy(s->honors, "Fail");
 }
 
-void afficher_etudiant(Etudiant e) {
-    float moy = calculer_moyenne(e.notes, 3);
-    printf("%s — Moyenne : %.2f — %s\n", e.nom, moy, e.mention);
+void display_student(Student s) {
+    float avg = calculate_average(s.grades, 3);
+    printf("%s — Average: %.2f — %s\n", s.name, avg, s.honors);
 }
 
 int main() {
-    Etudiant etudiants[MAX_ETUDIANTS];
-    int nb = 0;
+    Student students[MAX_STUDENTS];
+    int count = 0;
 
-    // Ajout manuel
-    strcpy(etudiants[0].nom, "Alice");
-    etudiants[0].notes[0] = 17.5;
-    etudiants[0].notes[1] = 15.0;
-    etudiants[0].notes[2] = 18.0;
-    attribuer_mention(&etudiants[0]);
-    nb++;
+    // Manual data entry
+    strcpy(students[0].name, "Alice");
+    students[0].grades[0] = 17.5;
+    students[0].grades[1] = 15.0;
+    students[0].grades[2] = 18.0;
+    assign_honors(&students[0]);
+    count++;
 
-    strcpy(etudiants[1].nom, "Bob");
-    etudiants[1].notes[0] = 9.0;
-    etudiants[1].notes[1] = 11.5;
-    etudiants[1].notes[2] = 8.0;
-    attribuer_mention(&etudiants[1]);
-    nb++;
+    strcpy(students[1].name, "Bob");
+    students[1].grades[0] = 9.0;
+    students[1].grades[1] = 11.5;
+    students[1].grades[2] = 8.0;
+    assign_honors(&students[1]);
+    count++;
 
-    strcpy(etudiants[2].nom, "Charlie");
-    etudiants[2].notes[0] = 13.0;
-    etudiants[2].notes[1] = 12.5;
-    etudiants[2].notes[2] = 14.0;
-    attribuer_mention(&etudiants[2]);
-    nb++;
+    strcpy(students[2].name, "Charlie");
+    students[2].grades[0] = 13.0;
+    students[2].grades[1] = 12.5;
+    students[2].grades[2] = 14.0;
+    assign_honors(&students[2]);
+    count++;
 
-    // Affichage
-    printf("=== Résultats ===\n");
-    for (int i = 0; i < nb; i++) {
-        afficher_etudiant(etudiants[i]);
+    // Display results
+    printf("=== Results ===\n");
+    for (int i = 0; i < count; i++) {
+        display_student(students[i]);
     }
 
-    // Meilleur étudiant
+    // Top student
     int best = 0;
-    for (int i = 1; i < nb; i++) {
-        if (calculer_moyenne(etudiants[i].notes, 3) >
-            calculer_moyenne(etudiants[best].notes, 3)) {
+    for (int i = 1; i < count; i++) {
+        if (calculate_average(students[i].grades, 3) >
+            calculate_average(students[best].grades, 3)) {
             best = i;
         }
     }
-    printf("\nMeilleur étudiant : %s\n", etudiants[best].nom);
+    printf("\nTop student: %s\n", students[best].name);
 
     return 0;
 }
