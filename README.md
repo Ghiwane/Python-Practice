@@ -16,6 +16,10 @@ A comprehensive synthesis exercise focused on Object-Oriented Programming (OOP) 
 A practice module dedicated to converting algorithms and programs from C to Python.
 * Designed to adapt procedural concepts (arrays, loops, manual memory/structs) into modern, clean Python syntax (lists, built-in methods, OOP).
 
+* ### 3. Exercices (`/Exercices`)
+A collection of standalone scripts focused on understanding Python's core syntax, data structures, and foundational algorithms.
+* **Exercises included**: `Anagrams.py`, `AnalyzeGrades.py`, `Calculator.py`, `Contacts.py`, and `FizzBuzz.py`.
+
 ---
 
 ## 🛠️ Project Structure
@@ -24,6 +28,13 @@ A practice module dedicated to converting algorithms and programs from C to Pyth
 Python Practice/
 ├── .gitignore               # Global exclusion rules (cache, compiled .exe files)
 ├── README.md                # Global repository documentation
+│
+├── Exercices/               # Exercises: Syntax & Logic Practice
+│   ├── Anagrams.py
+│   ├── AnalyzeGrades.py
+│   ├── Calculator.py
+│   ├── Contacts.py
+│   └── FizzBuzz.py
 │
 ├── League-manager/          # Project: OOP League Management
 │   ├── main.py
