@@ -18,7 +18,6 @@ A practice module dedicated to converting algorithms and programs from C to Pyth
 
 * ### 3. Exercices (`/Exercices`)
 A collection of standalone scripts focused on understanding Python's core syntax, data structures, and foundational algorithms.
-* **Exercises included**: `Anagrams.py`, `AnalyzeGrades.py`, `Calculator.py`, `Contacts.py`, and `FizzBuzz.py`.
 
 ---
 
@@ -32,6 +31,7 @@ Python Practice/
 ├── Exercices/               # Exercises: Syntax & Logic Practice
 │   ├── Anagrams.py
 │   ├── AnalyzeGrades.py
+│   ├── Analysis_of_a_vehicle_fleet.py
 │   ├── Calculator.py
 │   ├── Contacts.py
 │   └── FizzBuzz.py
