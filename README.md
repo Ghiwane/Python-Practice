@@ -46,3 +46,12 @@ Python Practice/
     ├── CFile.c              # Original C source code
     ├── CFile.exe            # Locally compiled executable
     └── script.py            # Translated Python script
+```
+
+---
+
+## 🔧 Requirements
+
+```bash
+pip install -r requirements.txt
+```
