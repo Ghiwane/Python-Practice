@@ -30,8 +30,9 @@ Python Practice/
 │
 ├── Exercices/               # Exercises: Syntax & Logic Practice
 │   ├── Anagrams.py
-│   ├── AnalyzeGrades.py
 │   ├── Analysis_of_a_vehicle_fleet.py
+│   ├── Analysis_of_a_music_catalog.py
+│   ├── AnalyzeGrades.py
 │   ├── Calculator.py
 │   ├── Contacts.py
 │   └── FizzBuzz.py
