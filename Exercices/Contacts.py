@@ -3,11 +3,13 @@ import os
 
 def add_contact(name, num, email, file):
     try:
+        # Check beforehand whether the file already exists, to decide if we need a header row
         file_exists = os.path.exists(file)
         with open(file, "a", encoding="utf-8", newline="") as f:
             lead = ["name", "num", "email"]
             writer = csv.DictWriter(f, fieldnames=lead)
 
+            # Only write the header once, when the file is created for the first time
             if not file_exists:
                 writer.writeheader()
 
@@ -25,6 +27,7 @@ def research_name(name, file):
         with open(file, "r", encoding="utf-8") as f:
             reader = csv.DictReader(f)
             found = False
+            # Scan rows one by one until a match is found
             for line in reader:
                 if name == line["name"]:
                     print(f"{line['name']}, {line['num']}, {line['email']}")

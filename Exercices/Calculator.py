@@ -6,6 +6,7 @@ class Calculator:
     def addition(self, a, b):
         self.n+=1
         res = a+b
+        # Keep a human-readable log of every operation performed
         self.history_list.append(f"{a} + {b} = {res}")
         print(res)
     
@@ -15,6 +16,7 @@ class Calculator:
             self.history_list.append(f"{a} / {b} = {res}")
             print(res)
             self.n+=1
+        # Division by zero doesn't count as a successful operation, so n is not incremented
         except ZeroDivisionError:
             print("We can't, buddy.")
 
@@ -30,6 +32,7 @@ class Calculator:
         self.history_list.append(f"{a} - {b} = {res}")
         print(res)
     
+    # Custom string representation, used automatically by print()
     def __str__(self):
         return f"Calculator {self.n} operations"
 

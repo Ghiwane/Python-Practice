@@ -5,6 +5,7 @@ def analyze_grades(grades):
             file["max"] = float(max(grades))
             file["min"]= float(min(grades))
 
+            # Count how many grades are passing (>= 10)
             admitted=0
             for i in grades:
                 if i >= 10:
@@ -12,6 +13,7 @@ def analyze_grades(grades):
             file["admitted"]=admitted
 
             print(file)
+        # Empty list triggers ZeroDivisionError (mean) and ValueError (max/min on empty sequence)
         except (ZeroDivisionError, ValueError):
             print("It's empty here buddy!")
 
