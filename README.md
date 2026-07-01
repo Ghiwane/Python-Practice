@@ -35,7 +35,9 @@ Python Practice/
 │   ├── AnalyzeGrades.py
 │   ├── Calculator.py
 │   ├── Contacts.py
-│   └── FizzBuzz.py
+│   ├── FizzBuzz.py
+│   ├── Library_management.py
+│   └── Order_management_system.py
 │
 ├── League-manager/          # Project: OOP League Management
 │   ├── main.py
