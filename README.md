@@ -16,7 +16,7 @@ A comprehensive synthesis exercise focused on Object-Oriented Programming (OOP) 
 A practice module dedicated to converting algorithms and programs from C to Python.
 * Designed to adapt procedural concepts (arrays, loops, manual memory/structs) into modern, clean Python syntax (lists, built-in methods, OOP).
 
-* ### 3. Exercices (`/Exercices`)
+### 3. Exercices (`/Exercices`)
 A collection of standalone scripts focused on understanding Python's core syntax, data structures, and foundational algorithms.
 
 ---
