@@ -19,6 +19,12 @@ A practice module dedicated to converting algorithms and programs from C to Pyth
 ### 3. Exercices (`/Exercices`)
 A collection of standalone scripts focused on understanding Python's core syntax, data structures, and foundational algorithms.
 
+### 4. Streaming Analytics (`/Streaming-Analytics`)
+A synthesis project simulating a real-world data cleaning and merging scenario for a streaming platform.
+* **Missing Values Handling**: Strategic imputation (mode, median) and removal (`dropna`) depending on the variable type.
+* **Merging**: Combining `users` and `watch history` datasets via a left join on `user_id`.
+* **Validation**: Post-merge checks to confirm no unexpected `NaN` values were introduced.
+
 ---
 
 ## 🛠️ Project Structure
@@ -44,10 +50,14 @@ Python Practice/
 │   ├── Player.py
 │   └── League.py
 │
-└── From-C-to-Python/        # Exercises: C to Python Conversion
-    ├── CFile.c              # Original C source code
-    ├── CFile.exe            # Locally compiled executable
-    └── script.py            # Translated Python script
+├── From-C-to-Python/        # Exercises: C to Python Conversion
+│   ├── CFile.c              # Original C source code
+│   ├── CFile.exe            # Locally compiled executable
+│   └── script.py            # Translated Python script
+│
+└── Streaming-Analytics/     # Project: Data Cleaning & Merging
+    ├── Analysis_of_a_streaming_platform.py
+    └── README.md
 ```
 
 ---
